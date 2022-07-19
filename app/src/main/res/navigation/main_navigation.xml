@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeMainFragment">
+
+    <fragment
+        android:id="@+id/accountLoginFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountLoginFragment"
+        android:label="fragment_account_login"
+        tools:layout="@layout/fragment_account_login" >
+        <action
+            android:id="@+id/action_accountLoginFragment_to_accountMemberFragment"
+            app:destination="@id/accountMemberFragment" />
+        <action
+            android:id="@+id/action_accountLoginFragment_to_accountForgetPasswordFragment"
+            app:destination="@id/accountForgetPasswordFragment" />
+        <action
+            android:id="@+id/action_accountLoginFragment_to_accountRegisterFragment"
+            app:destination="@id/accountRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeMainFragment"
+        android:name="com.jotangi.beipucharm.HomeMainFragment"
+        android:label="fragment_home_main"
+        tools:layout="@layout/fragment_home_main" >
+        <action
+            android:id="@+id/action_homeMainFragment_to_accountLoginFragment"
+            app:destination="@id/accountLoginFragment" />
+        <action
+            android:id="@+id/action_homeMainFragment_to_storeProductCategoryFragment"
+            app:destination="@id/storeProductCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountConsumptionRecordFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountConsumptionRecordFragment"
+        android:label="fragment_account_consumption_record"
+        tools:layout="@layout/fragment_account_consumption_record" >
+        <action
+            android:id="@+id/action_accountConsumptionRecordFragment_to_accountDetailsFragment"
+            app:destination="@id/accountDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountDataFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountDataFragment"
+        android:label="fragment_account_data"
+        tools:layout="@layout/fragment_account_data" >
+        <action
+            android:id="@+id/action_accountDataFragment_to_accountReviseFragment"
+            app:destination="@id/accountReviseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountDetailsFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountDetailsFragment"
+        android:label="fragment_account_details"
+        tools:layout="@layout/fragment_account_details" />
+    <fragment
+        android:id="@+id/accountForgetPasswordFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountForgetPasswordFragment"
+        android:label="fragment_account_forget_password"
+        tools:layout="@layout/fragment_account_forget_password" />
+    <fragment
+        android:id="@+id/accountMainCouponFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountMainCouponFragment"
+        android:label="fragment_account_main_coupon"
+        tools:layout="@layout/fragment_account_main_coupon" />
+    <fragment
+        android:id="@+id/accountMemberFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountMemberFragment"
+        android:label="fragment_account_member"
+        tools:layout="@layout/fragment_account_member" >
+        <action
+            android:id="@+id/action_accountMemberFragment_to_accountDataFragment"
+            app:destination="@id/accountDataFragment" />
+        <action
+            android:id="@+id/action_accountMemberFragment_to_accountConsumptionRecordFragment"
+            app:destination="@id/accountConsumptionRecordFragment" />
+        <action
+            android:id="@+id/action_accountMemberFragment_to_accountMainCouponFragment"
+            app:destination="@id/accountMainCouponFragment" />
+        <action
+            android:id="@+id/action_accountMemberFragment_to_accountQAFragment"
+            app:destination="@id/accountQAFragment" />
+        <action
+            android:id="@+id/action_accountMemberFragment_to_accountTermsUseFragment"
+            app:destination="@id/accountTermsUseFragment" />
+        <action
+            android:id="@+id/action_accountMemberFragment_to_accountThemePackageFragment"
+            app:destination="@id/accountThemePackageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountQAFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountQAFragment"
+        android:label="fragment_account_q_a"
+        tools:layout="@layout/fragment_account_q_a" />
+    <fragment
+        android:id="@+id/accountRegisterFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountRegisterFragment"
+        android:label="fragment_account_register"
+        tools:layout="@layout/fragment_account_register" />
+    <fragment
+        android:id="@+id/accountReviseFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountReviseFragment"
+        android:label="fragment_account_revise"
+        tools:layout="@layout/fragment_account_revise" />
+    <fragment
+        android:id="@+id/accountTermsUseFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountTermsUseFragment"
+        android:label="fragment_account_terms_use"
+        tools:layout="@layout/fragment_account_terms_use" />
+    <fragment
+        android:id="@+id/accountThemePackageFragment"
+        android:name="com.jotangi.beipucharm.Account.AccountThemePackageFragment"
+        android:label="fragment_theme_package"
+        tools:layout="@layout/fragment_theme_package" />
+    <fragment
+        android:id="@+id/storeProductCategoryFragment"
+        android:name="com.jotangi.beipucharm.Store.StoreProductCategoryFragment"
+        android:label="fragment_store_product_category"
+        tools:layout="@layout/fragment_store_product_category" >
+        <action
+            android:id="@+id/action_storeProductCategoryFragment_to_storeBuyCommodityFragment"
+            app:destination="@id/storeBuyCommodityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeBuyCommodityFragment"
+        android:name="com.jotangi.beipucharm.Store.StoreBuyCommodityFragment"
+        android:label="fragment_store_buy_commodity"
+        tools:layout="@layout/fragment_store_buy_commodity" >
+        <action
+            android:id="@+id/action_storeBuyCommodityFragment_to_storeCartFragment"
+            app:destination="@id/storeCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeCartFragment"
+        android:name="com.jotangi.beipucharm.Store.StoreCartFragment"
+        android:label="fragment_store_cart"
+        tools:layout="@layout/fragment_store_cart" >
+        <action
+            android:id="@+id/action_storeCartFragment_to_storePurchaseDetailsFragment"
+            app:destination="@id/storePurchaseDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storePurchaseDetailsFragment"
+        android:name="com.jotangi.beipucharm.Store.StorePurchaseDetailsFragment"
+        android:label="fragment_store_purchase_details"
+        tools:layout="@layout/fragment_store_purchase_details" >
+        <action
+            android:id="@+id/action_storePurchaseDetailsFragment_to_storePayFragment"
+            app:destination="@id/storePayFragment" />
+        <action
+            android:id="@+id/action_storePurchaseDetailsFragment_to_storeNotEstablishedFragment"
+            app:destination="@id/storeNotEstablishedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeFinishBuyCartFragment"
+        android:name="com.jotangi.beipucharm.Store.StoreFinishBuyCartFragment"
+        android:label="fragment_store_finish_buy_cart"
+        tools:layout="@layout/fragment_store_finish_buy_cart" />
+    <fragment
+        android:id="@+id/storePayFragment"
+        android:name="com.jotangi.beipucharm.Store.StorePayFragment"
+        android:label="fragment_store_pay"
+        tools:layout="@layout/fragment_store_pay" >
+        <action
+            android:id="@+id/action_storePayFragment_to_storeFinishBuyCartFragment"
+            app:destination="@id/storeFinishBuyCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeNotEstablishedFragment"
+        android:name="com.jotangi.beipucharm.Store.StoreNotEstablishedFragment"
+        android:label="fragment_store_not_established"
+        tools:layout="@layout/fragment_store_not_established" />
+</navigation>

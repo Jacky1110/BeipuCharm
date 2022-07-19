@@ -13,4 +13,12 @@
     <color name="lightGray">#BEBEBE</color>
     <color name="c_4b525b_100">#4b525b</color>
     <color name="c_b21b25_100">#b21b25</color>
+    <color name="darkGray">#1B1B1B</color>
+    <color name="cadetblue">#5F9EA0</color>
+    <color name="alpha">#0000</color>
+    <color name="bottom_text_selector">#2196F3</color>
+    <color name="white_pink">#FFDCF6</color>
+    <color name="gray_f0">#f0f0f0</color>
+    <color name="colorPrimary">#FF5100</color>
+    <color name="circle_background">#FFFFFFFF</color>
 </resources>

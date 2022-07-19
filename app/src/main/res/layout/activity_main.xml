@@ -1,255 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/mainLayout"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/tv_beipuShop"
+    <com.jotangi.beipucharm.internal.NoTouchViewPager
+        android:id="@+id/noTouchViewPager"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/shape_pink"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.25" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.75" />
-
-        <ImageView
-            android:id="@+id/iv_member"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_new_account" />
-
-        <ImageView
-            android:id="@+id/iv_shoppingCar"
-            android:layout_width="45dp"
-            android:layout_height="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/iv_member"
-            app:layout_constraintStart_toStartOf="@id/guideline6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_shopping_cart" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="北埔印象"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_logo" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vp_advertise"
+    <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_beipuShop" >
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:scaleType="centerCrop"
+        android:src="@color/darkGray" />
 
-    </androidx.viewpager2.widget.ViewPager2>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+    <com.jotangi.beipucharm.listener.PageNavigationView
+        android:id="@+id/pagerNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vp_advertise">
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:clipChildren="false" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorSeparator"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/iv_shop"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="60dp"
-                app:srcCompat="@drawable/ic_shopping_cart" />
-
-            <ImageView
-                android:id="@+id/iv_combo"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="50dp"
-                app:srcCompat="@drawable/ic_combo" />
-
-            <ImageView
-                android:id="@+id/iv_ar"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="50dp"
-                app:srcCompat="@drawable/ic_ar" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorSeparator"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:text="線上商城"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:text="主題套餐"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:text="數位導覽"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorSeparator"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-            <ImageView
-                android:id="@+id/iv_map"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="60dp"
-                app:srcCompat="@drawable/ic_map" />
-
-            <ImageView
-                android:id="@+id/iv_park"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="50dp"
-                app:srcCompat="@drawable/ic_p" />
-
-            <ImageView
-                android:id="@+id/iv_healthy"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="50dp"
-                app:srcCompat="@drawable/ic_healthy" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorSeparator"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:text="電子地圖"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:text="停車資訊"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:text="健康快篩"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="北埔嚴選"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vp_choose"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
