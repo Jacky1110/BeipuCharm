@@ -35,9 +35,10 @@
         <entry key="app/src/main/res/drawable/special_tab_bg.xml" value="0.197" />
         <entry key="app/src/main/res/drawable/special_tab_round_bg.xml" value="0.197" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22056159420289856" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.250190007798724" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29673590504451036" />
         <entry key="app/src/main/res/layout/dialog.xml" value="0.18812330009066183" />
         <entry key="app/src/main/res/layout/dialog_normal.xml" value="0.18812330009066183" />
+        <entry key="app/src/main/res/layout/dialog_one_button.xml" value="0.1278324070115434" />
         <entry key="app/src/main/res/layout/fragment_account_consumption_record.xml" value="0.18795289855072464" />
         <entry key="app/src/main/res/layout/fragment_account_data.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/fragment_account_details.xml" value="0.18795289855072464" />
@@ -53,7 +54,7 @@
         <entry key="app/src/main/res/layout/fragment_digit_tour.xml" value="0.18812330009066183" />
         <entry key="app/src/main/res/layout/fragment_digital_map.xml" value="0.18812330009066183" />
         <entry key="app/src/main/res/layout/fragment_forget_password.xml" value="0.22056159420289856" />
-        <entry key="app/src/main/res/layout/fragment_home_main.xml" value="0.18795289855072464" />
+        <entry key="app/src/main/res/layout/fragment_home_main.xml" value="0.424197100210881" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/fragment_main_coupon.xml" value="0.18795289855072464" />
         <entry key="app/src/main/res/layout/fragment_manager.xml" value="0.18812330009066183" />

@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/button_background_gradient"
+            android:background="@drawable/shape_round_light_typered"
             android:fontFamily="sans-serif-thin"
             android:text="掃描支付"
             android:textColor="@color/circle_background"

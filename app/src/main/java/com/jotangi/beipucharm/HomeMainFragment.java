@@ -1,16 +1,15 @@
 package com.jotangi.beipucharm;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.viewpager.widget.ViewPager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.viewpager.widget.ViewPager;
 
 import com.stx.xhb.xbanner.XBanner;
 
@@ -54,19 +53,36 @@ public class HomeMainFragment extends BaseFragment implements View.OnClickListen
         btnMember.setOnClickListener(this);
         btnShoppingCar = view.findViewById(R.id.iv_shoppingCar);
         btnShoppingCar.setOnClickListener(this);
+        shopViewPager = view.findViewById(R.id.vp_choose);
+        shopViewPager.setClipToPadding(false);
+        shopViewPager.setClipChildren(false);
+        shopViewPager.setOffscreenPageLimit(3);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
+            case R.id.iv_member:
+                controller = Navigation.findNavController(v);
+                controller.navigate(R.id.action_homeMainFragment_to_accountLoginFragment);
+                break;
+            case R.id.iv_shoppingCar:
+                controller = Navigation.findNavController(v);
+                controller.navigate(R.id.action_homeMainFragment_to_storeCartFragment);
+                break;
             case R.id.iv_shop:
                 controller = Navigation.findNavController(v);
                 controller.navigate(R.id.action_homeMainFragment_to_storeProductCategoryFragment);
                 break;
             case R.id.iv_combo:
-
+                Toast.makeText(getActivity(), "建置中\n敬請期待", Toast.LENGTH_SHORT).show();
+            case R.id.iv_ar:
+                Toast.makeText(getActivity(), "建置中\n敬請期待", Toast.LENGTH_SHORT).show();
+            case R.id.iv_map:
+                Toast.makeText(getActivity(), "建置中\n敬請期待", Toast.LENGTH_SHORT).show();
+            case R.id.iv_park:
+                Toast.makeText(getActivity(), "建置中\n敬請期待", Toast.LENGTH_SHORT).show();
                 break;
         }
-
     }
 }
